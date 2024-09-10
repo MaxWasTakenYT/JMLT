@@ -7,7 +7,7 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
-    cout << "welcome to jstmax's linux toolbox (JMLT 4short)\n";
+    cout << "welcome to jstmax's Linux Toolbox (JMLT 4short)\n";
     cout << "insert your username: "; string username; cin >> username; cout << endl;
     cout << "every option is available on the github repo's readme.md\n\n";
 
