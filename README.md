@@ -6,4 +6,4 @@ you could really just "gitignore" this repo since it's just a personal thing i n
 since it is the one i primarily use on my laptop.*
 ## available options
 * **-jmuse** / **--prepare-for-jstmax-use** : installs the packages that i would need on a fresh arch install.
-* **-cmd** / **--custom-command** : installs the packages that i would need on a fresh arch install.
+* **-cmd** / **--custom-command** : enters a custom command, execute without the command, it will ask you the command later
