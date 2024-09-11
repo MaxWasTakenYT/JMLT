@@ -30,24 +30,24 @@ int main(int argc, char* argv[]) {
                         cout << "running a full system update..\n";
                         int fsuRes = system("sudo pacman -Syu --noconfirm");
                         if (fsuRes == 0) {
-                            cout << ready4use; say what;
+                            cout << ready4use << endl; say what;
                         }
                         else {
                             cout << err; say what;
                         }
-                        cout << ready4use; say what;
+                        cout << ready4use << endl; say what;
                     }
                     else {
-                        cout << ready4use; say what;
+                        cout << ready4use << endl; say what;
                     }
                 }
                 else {
-                    cout << err;
+                    cout << err << endl;
                     say what;
                 }
             }
             else {
-                cout << "aborting.."; say what;
+                cout << "aborting.." << endl; say what;
             }
         }
 
@@ -60,8 +60,7 @@ int main(int argc, char* argv[]) {
                 say what;
             }
             else {
-                cout << err;
-                say what;
+                cout << err << endl; say what;
             }
         }
 
@@ -77,7 +76,7 @@ int main(int argc, char* argv[]) {
                 string pkg2inst = "sudo pacman -S " + pkgName;
                 int pmyres = system(pkg2inst.c_str());
                 if (pmyres == 0) { cout << "package installed successfully!"; }
-                else { cout << err; }
+                else { cout << err << endl; }
                 say what;
             }
             else if (pmh2d == "-Sy" || pmh2d == "-sy") {
@@ -85,7 +84,7 @@ int main(int argc, char* argv[]) {
                 string pkg2inst = "sudo pacman -Sy " + pkgName;
                 int pmyres = system(pkg2inst.c_str());
                 if (pmyres == 0) { cout << "package installed successfully!"; }
-                else { cout << err; }
+                else { cout << err << endl; }
                 say what;
             }
             else if (pmh2d == "-Syu" || pmh2d == "-syu") {
@@ -93,11 +92,11 @@ int main(int argc, char* argv[]) {
                 string pkg2inst = "sudo pacman -Syu " + pkgName;
                 int pmyres = system(pkg2inst.c_str());
                 if (pmyres == 0) { cout << "package installed and full system update ended successfully!"; }
-                else { cout << err; }
+                else { cout << err << endl; }
                 say what;
             }
         }
-        else if (argc > 4 && (string(argv[4]) == "-yy" || string(argv[3]) == "--yay-yes")) {
+        else if (argc > 4 && (string(argv[4]) == "-yy" || string(argv[4]) == "--yay-yes")) {
             cout << "welcome to \"yay-yes\" (or jm-yayy)\n";
             cout << noroot;
             cout << "package name?: ";
@@ -109,7 +108,7 @@ int main(int argc, char* argv[]) {
                 string pkg2inst = "yay -S " + pkgName;
                 int pmyres = system(pkg2inst.c_str());
                 if (pmyres == 0) { cout << "package installed successfully!"; }
-                else { cout << err; }
+                else { cout << err << endl; }
                 say what;
             }
             else if (pmh2d == "-Sy" || pmh2d == "-sy") {
@@ -117,7 +116,7 @@ int main(int argc, char* argv[]) {
                 string pkg2inst = "sudo yay -Sy " + pkgName;
                 int pmyres = system(pkg2inst.c_str());
                 if (pmyres == 0) { cout << "package installed successfully!"; }
-                else { cout << err; }
+                else { cout << err << endl; }
                 say what;
             }
             else if (pmh2d == "-Syu" || pmh2d == "-syu") {
@@ -125,7 +124,7 @@ int main(int argc, char* argv[]) {
                 string pkg2inst = "sudo yay -Syu " + pkgName;
                 int pmyres = system(pkg2inst.c_str());
                 if (pmyres == 0) { cout << "package installed and full system update ended successfully!"; }
-                else { cout << err; }
+                else { cout << err << endl; }
                 say what;
             }
         }
