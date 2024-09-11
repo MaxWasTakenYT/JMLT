@@ -1,4 +1,4 @@
-name: Build and Release JM- Project
+name: Build and Release JMLT Release
 
 on:
   push:
