@@ -7,3 +7,8 @@ you could really just "gitignore" this repo since it's just a personal thing i n
 * **-c** / **--custom-command** : enters a custom command, execute without the command, it will ask you the command later
 * **-pmy** / **--pacman-yes** : full implementation of (now defunct) 'jm-pacmany'
 * **-yy** / **--yay-yes** : full implementation of (now defunct) 'jm-yayy'
+
+## build yourself;
+* download/clone the repo
+* open the 'build' folder
+* check the 'README' file
