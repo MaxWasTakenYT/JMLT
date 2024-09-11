@@ -35,9 +35,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
+
     permissions:
+      contents: write
       actions: write
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
@@ -52,7 +54,7 @@ jobs:
       timeout-minutes: 5
 
     - name: Create GitHub Release
-      uses: actions/create-release@v1
+      uses: actions/create-release@v1.1.0
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         tag_name: T.${{ github.run_id }}
