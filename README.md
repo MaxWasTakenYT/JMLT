@@ -15,7 +15,9 @@ it's not like you have a choice, since there are no releases :)
 * open the 'build' folder: `cd ./build`
 * give permissions to 'build-jmlt': `chmod +x ./build-jmlt`
 * run 'build-jmlt': `./build-jmlt`
-* [optional] one-liner bc yes: \
-`git clone https://github.com/MaxWasTakenYT/jstmax-linux-toolbox && cd ./jstmax-linux-toolbox/build/ && chmod +x ./build-jmlt && ./build-jmlt` \
+* [recommended] add to PATH: `sudo mv ./jmlt4 /usr/bin/jmlt4`
 
+&nbsp;
+* [hahahahahahahahaha] one-liner bc yes: \
+`git clone https://github.com/MaxWasTakenYT/jstmax-linux-toolbox && cd ./jstmax-linux-toolbox/build/ && chmod +x ./build-jmlt && ./build-jmlt` \
 ###### [!] check the 'README' file for other stuff
