@@ -19,5 +19,5 @@ it's not like you have a choice, since there are no releases :)
 
 &nbsp;
 * [hahahahahahahahaha] one-liner bc yes: \
-`git clone https://github.com/MaxWasTakenYT/jstmax-linux-toolbox && cd ./jstmax-linux-toolbox/build/ && chmod +x ./build-jmlt && ./build-jmlt` \
+`git clone https://github.com/MaxWasTakenYT/jstmax-linux-toolbox && cd ./jstmax-linux-toolbox/build/ && chmod +x ./build-jmlt && ./build-jmlt`
 ###### [!] check the 'README' file for other stuff
