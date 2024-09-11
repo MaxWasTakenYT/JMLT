@@ -1,0 +1,6 @@
+[!] README - How to build JMLT
+1. Run './build-jmlt' in the 'build' folder
+2. Done!
+
+*Note: Make sure you have 'gcc' installed before building.
+*Note 2: To build again, you'll need to delete the 'JMLT.cpp' and 'jmlt4' files first.
