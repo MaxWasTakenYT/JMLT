@@ -5,3 +5,5 @@ you could really just "gitignore" this repo since it's just a personal thing i n
 ## available options;
 * **-jmuse** / **--prepare-for-jstmax-use** : installs the packages that i would need on a fresh arch install.
 * **-cmd** / **--custom-command** : enters a custom command, execute without the command, it will ask you the command later
+* **-pmy** / **--pacman-yes** : full implementation of (now defunct) 'jm-pacmany'
+* **-yy** / **--yay-yes** : full implementation of (now defunct) 'jm-yayy'
