@@ -1,0 +1,63 @@
+name: Build and Release JM- Project
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install GCC and G++
+      run: sudo apt-get install -y gcc g++
+
+    - name: Compile JMLT.cpp
+      run: g++ -o JMLT JMLT.cpp
+
+    - name: Archive JMLT binary
+      run: tar -cvf JMLT.tar.gz JMLT
+
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: JMLT-binary
+        path: JMLT.tar.gz
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Download build artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: JMLT-binary
+
+    - name: Request approval for release
+      uses: peter-evans/enable-pending-check@v2
+      with:
+        step: 'Release'
+        comment: 'Approve this to create a new release'
+
+    - name: Create GitHub Release
+      if: ${{ steps.pending_approval.outcome == 'success' }}
+      uses: actions/create-release@v1
+      with:
+        tag_name: T.${{ github.run_id }}
+        release_name: "JMLT - Release T${{ github.run_id }}"
+        body: "Automated release of JMLT binary"
+        draft: false
+        prerelease: false
+        files: JMLT.tar.gz
