@@ -8,7 +8,7 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
     cout << "welcome to jstmax's Linux Toolbox! (JMLT 4 short)\n";
-    cout << "insert your username: "; string username; cin >> username; cout << endl << endl;
+    cout << "insert your username: "; string username; cin >> username; cout << endl;
 
     string ready4use = "now your system is ready to be \"jstmax!-used\"!";
     string err = "an error occurred, funny thing is that i don't want or have time to create a way to check logs so.. i guess \"fuck you, try again\" is the right answer this time?\n";
@@ -29,19 +29,20 @@ int main(int argc, char* argv[]) {
                     cout << "running a full system update..\n";
                     int fsuRes = system("sudo pacman -Syu --noconfirm");
                     if (fsuRes == 0) {
-                        cout << ready4use;
+                        cout << ready4use; say what;
                     }
                     else {
-                        cout << err;
+                        cout << err; say what;
                     }
-                    cout << ready4use;
+                    cout << ready4use; say what;
                 }
                 else {
-                    cout << ready4use;
+                    cout << ready4use; say what;
                 }
             }
             else {
                 cout << err;
+                say what;
             }
         }
 
@@ -52,9 +53,11 @@ int main(int argc, char* argv[]) {
             int returnCustomCmd = system(customCmd.c_str());
             if (returnCustomCmd == 0) {
                 cout << "\ncommand executed correctly!\n";
+                say what;
             }
             else {
                 cout << err;
+                say what;
             }
         }
 
@@ -71,6 +74,7 @@ int main(int argc, char* argv[]) {
                 int pmyres = system(pkg2inst.c_str());
                 if (pmyres == 0) { cout << "package installed successfully!"; }
                 else { cout << err; }
+                say what;
             }
             else if (pmh2d == "-Sy" || pmh2d == "-sy") {
                 cout << "installing package..";
@@ -78,6 +82,7 @@ int main(int argc, char* argv[]) {
                 int pmyres = system(pkg2inst.c_str());
                 if (pmyres == 0) { cout << "package installed successfully!"; }
                 else { cout << err; }
+                say what;
             }
             else if (pmh2d == "-Syu" || pmh2d == "-syu") {
                 cout << "installing package..";
@@ -85,6 +90,7 @@ int main(int argc, char* argv[]) {
                 int pmyres = system(pkg2inst.c_str());
                 if (pmyres == 0) { cout << "package installed and full system update ended successfully!"; }
                 else { cout << err; }
+                say what;
             }
         }
         else if (argc > 4 && (string(argv[4]) == "-yy" || string(argv[3]) == "--yay-yes")) {
@@ -100,6 +106,7 @@ int main(int argc, char* argv[]) {
                 int pmyres = system(pkg2inst.c_str());
                 if (pmyres == 0) { cout << "package installed successfully!"; }
                 else { cout << err; }
+                say what;
             }
             else if (pmh2d == "-Sy" || pmh2d == "-sy") {
                 cout << "installing package..";
@@ -107,6 +114,7 @@ int main(int argc, char* argv[]) {
                 int pmyres = system(pkg2inst.c_str());
                 if (pmyres == 0) { cout << "package installed successfully!"; }
                 else { cout << err; }
+                say what;
             }
             else if (pmh2d == "-Syu" || pmh2d == "-syu") {
                 cout << "installing package..";
@@ -114,6 +122,7 @@ int main(int argc, char* argv[]) {
                 int pmyres = system(pkg2inst.c_str());
                 if (pmyres == 0) { cout << "package installed and full system update ended successfully!"; }
                 else { cout << err; }
+                say what;
             }
         }
 
