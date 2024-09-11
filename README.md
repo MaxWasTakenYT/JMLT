@@ -3,7 +3,7 @@ a set of stupid FOSS tools for Linux (mainly Arch Linux)
 
 ## available options;
 * **-ju** / **--prepare-for-jstmax-use** : installs the packages that I would need on a fresh arch install
-* **-c** / **--custom-command** : enters a custom command
+* **-c** / **--custom-command** : enters a custom command (note: IT'S SHIT)
 * **-pmy** / **--pacman-yes** : full implementation of (now defunct) 'jm-pacmany'
 * **-yy** / **--yay-yes** : full implementation of (now defunct) 'jm-yayy'
 
