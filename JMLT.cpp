@@ -7,17 +7,21 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
-    cout << "welcome to jstmax's Linux Toolbox (JMLT 4short)\n";
+    cout << "welcome to jstmax's Linux Toolbox! (JMLT 4 short)\n";
     cout << "insert your username: "; string username; cin >> username; cout << endl;
-    cout << "every option is available on the github repo's readme.md\n\n";
+    cout << "every option is available on the github repo's readme.md!\n\n";
+    string ready4use = "now your system is ready to be \"jstmax!-used\"!";
+    string err = "an error occurred, funny thing is that i don't want or have time to create a way to check logs so.. i guess \"fuck you, try again\" is the right answer this time?\n";
+    string withroot = "[!] remember to run as root/with root privileges!!\n\n";
+    string noroot = "[!] remember to NOT run as root/with root privileges!!\n\n";
 
     if (argc > 1) {
         string option = argv[1];
         if (option == "-jmuse" || option == "--prepare-for-jstmax-use") {
-            cout << "[!] NOTE: since i code on windows, i cannot\n check if the user is root,\n to run '-jmuse', run the program as root.\n";
+            cout << withroot;
             cout << "preparing for \"jstmax!-use\"..\n";
-            string path = "cd /home/" + username;
-            system(path.c_str());
+            string homePath = "cd /home/" + username;
+            system(homePath.c_str());
             int returnCode = system("sudo pacman -Sy --noconfirm firefox reflector tldr fastfetch");
             if (returnCode == 0) {
                 cout << "run a full system update? (y/n)\n: "; string fsuChoice; cin >> fsuChoice;
@@ -25,19 +29,19 @@ int main(int argc, char* argv[]) {
                     cout << "running a full system update..\n";
                     int fsuRes = system("sudo pacman -Syu --noconfirm");
                     if (fsuRes == 0) {
-                        cout << "now your system is ready to be \"jstmax!-used\"";
+                        cout << ready4use;
                     }
                     else {
-                        cout << "an error occurred, funny thing is that i don't want or have time to create a way to check logs so.. i guess \"fuck you, try again\" is the right answer this time?\n";
+                        cout << err;
                     }
-                    cout << "now your system is ready to be \"jstmax!-used\"";
+                    cout << ready4use;
                 }
                 else {
-                    cout << "now your system is ready to be \"jstmax!-used\"";
+                    cout << ready4use;
                 }
             }
             else {
-                cout << "an error occurred, funny thing is that i don't want or have time to create a way to check logs so.. i guess \"fuck you, try again\" is the right answer this time?\n";
+                cout << err;
             }
         }
 
@@ -50,11 +54,68 @@ int main(int argc, char* argv[]) {
                 cout << "\ncommand executed correctly!\n";
             }
             else {
-                cout << "an error occurred, funny thing is that i don't want or have time to create a way to check logs so.. i guess \"fuck you, try again\" is the right answer this time?\n";
+                cout << err;
             }
         }
 
-        // else if (argc > 3 && (string(argv[3]) == "-hi" || string(argv[3]) == "--hello")) {}
+        else if (argc > 3 && (string(argv[3]) == "-pmy" || string(argv[3]) == "--pacman-yes")) {
+            cout << "welcome to \"pacman-yes\" (or jm-pacmany)\n";
+            cout << withroot;
+            cout << "package name?: ";
+            string pkgName; cin >> pkgName;
+            cout << "-S, -Sy or -Syu?: ";
+            string pmh2d; cin >> pmh2d;
+            if (pmh2d == "-S" || pmh2d == "-s") {
+                cout << "installing package..";
+                string pkg2inst = "sudo pacman -S " + pkgName;
+                int pmyres = system(pkg2inst.c_str());
+                if (pmyres == 0) { cout << "package installed successfully!"; }
+                else { cout << err; }
+            }
+            else if (pmh2d == "-Sy" || pmh2d == "-sy") {
+                cout << "installing package..";
+                string pkg2inst = "sudo pacman -Sy " + pkgName;
+                int pmyres = system(pkg2inst.c_str());
+                if (pmyres == 0) { cout << "package installed successfully!"; }
+                else { cout << err; }
+            }
+            else if (pmh2d == "-Syu" || pmh2d == "-syu") {
+                cout << "installing package..";
+                string pkg2inst = "sudo pacman -Syu " + pkgName;
+                int pmyres = system(pkg2inst.c_str());
+                if (pmyres == 0) { cout << "package installed and full system update ended successfully!"; }
+                else { cout << err; }
+            }
+        }
+        else if (argc > 4 && (string(argv[4]) == "-yy" || string(argv[3]) == "--yay-yes")) {
+            cout << "welcome to \"yay-yes\" (or jm-yayy)\n";
+            cout << noroot;
+            cout << "package name?: ";
+            string pkgName; cin >> pkgName;
+            cout << "-S, -Sy or -Syu?: ";
+            string pmh2d; cin >> pmh2d;
+            if (pmh2d == "-S" || pmh2d == "-s") {
+                cout << "installing package..";
+                string pkg2inst = "yay -S " + pkgName;
+                int pmyres = system(pkg2inst.c_str());
+                if (pmyres == 0) { cout << "package installed successfully!"; }
+                else { cout << err; }
+            }
+            else if (pmh2d == "-Sy" || pmh2d == "-sy") {
+                cout << "installing package..";
+                string pkg2inst = "sudo yay -Sy " + pkgName;
+                int pmyres = system(pkg2inst.c_str());
+                if (pmyres == 0) { cout << "package installed successfully!"; }
+                else { cout << err; }
+            }
+            else if (pmh2d == "-Syu" || pmh2d == "-syu") {
+                cout << "installing package..";
+                string pkg2inst = "sudo yay -Syu " + pkgName;
+                int pmyres = system(pkg2inst.c_str());
+                if (pmyres == 0) { cout << "package installed and full system update ended successfully!"; }
+                else { cout << err; }
+            }
+        }
 
         else {
             cout << "unknown option: " << option << "check github for available options.\n";
