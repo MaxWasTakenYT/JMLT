@@ -8,8 +8,8 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
     cout << "welcome to jstmax's Linux Toolbox! (JMLT 4 short)\n";
-    cout << "insert your username: "; string username; cin >> username; cout << endl;
-    cout << "every option is available on the github repo's readme.md!\n\n";
+    cout << "insert your username: "; string username; cin >> username; cout << endl << endl;
+
     string ready4use = "now your system is ready to be \"jstmax!-used\"!";
     string err = "an error occurred, funny thing is that i don't want or have time to create a way to check logs so.. i guess \"fuck you, try again\" is the right answer this time?\n";
     string withroot = "[!] remember to run as root/with root privileges!!\n\n";
@@ -17,7 +17,7 @@ int main(int argc, char* argv[]) {
 
     if (argc > 1) {
         string option = argv[1];
-        if (option == "-jmuse" || option == "--prepare-for-jstmax-use") {
+        if (option == "-ju" || option == "--prepare-for-jstmax-use") {
             cout << withroot;
             cout << "preparing for \"jstmax!-use\"..\n";
             string homePath = "cd /home/" + username;
@@ -45,7 +45,7 @@ int main(int argc, char* argv[]) {
             }
         }
 
-        else if (argc > 2 && (string(argv[2]) == "-cmd" || string(argv[2]) == "--custom-command")) {
+        else if (argc > 2 && (string(argv[2]) == "-c" || string(argv[2]) == "--custom-command")) {
             cout << "enter custom command: ";
             string customCmd;
             cin >> customCmd;
@@ -118,7 +118,8 @@ int main(int argc, char* argv[]) {
         }
 
         else {
-            cout << "unknown option: " << option << "check github for available options.\n";
+            cout << "every option is available on the github repo's readme.md!";
+            cout << "\nunknown option: " << option;
         }
     }
     say what;
