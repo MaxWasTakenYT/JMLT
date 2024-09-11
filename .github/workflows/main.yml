@@ -54,6 +54,7 @@ jobs:
     - name: Create GitHub Release
       uses: actions/create-release@v1
       with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         tag_name: T.${{ github.run_id }}
         release_name: "JMLT - Release T${{ github.run_id }}"
         body: "Automated release of JMLT binary"
