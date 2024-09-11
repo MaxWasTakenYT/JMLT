@@ -1,4 +1,4 @@
-# jstmax!'s Linux Toolbox (JMLT 4 short)
+# jstmax!'s Linux Toolbox (JMLT4Short)
 a set of stupid tools i created because idk i needed them on my laptop \
 you could really just "gitignore" this repo since it's just a personal thing i needed to host somewhere
 
