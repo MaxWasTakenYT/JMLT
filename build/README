@@ -1,5 +1,5 @@
 [!] README - How to build JMLT
-1. Give permissions to './build-jmlt' by running 'chmod +x ./build.jmlt'
+1. Give permissions to './build-jmlt' by running 'chmod +x ./build-jmlt'
 2. Run './build-jmlt' in the 'build' folder
 3. Done!
 
