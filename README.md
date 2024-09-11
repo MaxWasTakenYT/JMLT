@@ -1,4 +1,4 @@
-# jstmax!'s Linux Toolbox (or smth)
+# jstmax!'s Linux Toolbox (JMLT 4 short)
 a set of stupid tools i created because idk i needed them on my laptop \
 you could really just "gitignore" this repo since it's just a personal thing i needed to host somewhere
 
@@ -9,7 +9,13 @@ you could really just "gitignore" this repo since it's just a personal thing i n
 * **-yy** / **--yay-yes** : full implementation of (now defunct) 'jm-yayy'
 
 ## build yourself;
-it's not like you have a choice, there are no releases :)
-* download/clone the repo
-* open the 'build' folder
-* check the 'README' file
+it's not like you have a choice, since there are no releases :)
+* clone the repo: `git clone https://github.com/MaxWasTakenYT/jstmax-linux-toolbox`
+* go inside the repo folder: `cd ./jstmax-linux-toolbox`
+* open the 'build' folder: `cd ./build`
+* give permissions to 'build-jmlt': `chmod +x ./build-jmlt`
+* run 'build-jmlt': `./build-jmlt`
+* [optional] one-liner bc yes: \
+`git clone https://github.com/MaxWasTakenYT/jstmax-linux-toolbox && cd ./jstmax-linux-toolbox/build/ && chmod +x ./build-jmlt && ./build-jmlt` \
+
+###### [!] check the 'README' file for other stuff
