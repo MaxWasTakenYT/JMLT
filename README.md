@@ -3,7 +3,7 @@ a set of stupid tools i created because idk i needed them on my laptop \
 you could really just "gitignore" this repo since it's just a personal thing i needed to host somewhere
 
 ## available options;
-* **-ju** / **--prepare-for-jstmax-use** : installs the packages that @MaxWasTakenYT would need on a fresh arch install
+* **-ju** / **--prepare-for-jstmax-use** : installs the packages that I would need on a fresh arch install
 * **-c** / **--custom-command** : enters a custom command
 * **-pmy** / **--pacman-yes** : full implementation of (now defunct) 'jm-pacmany'
 * **-yy** / **--yay-yes** : full implementation of (now defunct) 'jm-yayy'
