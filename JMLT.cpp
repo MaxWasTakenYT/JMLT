@@ -7,8 +7,7 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
-    cout << "welcome to jstmax's Linux Toolbox! (JMLT 4 short)\n";
-    cout << "insert your username: "; string username; cin >> username; cout << endl;
+    cout << "welcome to jstmax's Linux Toolbox! (JMLT 4 short)\n\n";
 
     string ready4use = "now your system is ready to be \"jstmax!-used\"!";
     string err = "an error occurred, funny thing is that i don't want or have time to create a way to check logs so.. i guess \"fuck you, try again\" is the right answer this time?\n";
@@ -19,37 +18,42 @@ int main(int argc, char* argv[]) {
         string option = argv[1];
         if (option == "-ju" || option == "--prepare-for-jstmax-use") {
             cout << withroot;
-            cout << "preparing for \"jstmax!-use\"..\n";
-            string homePath = "cd /home/" + username;
-            system(homePath.c_str());
-            int returnCode = system("sudo pacman -Sy --noconfirm firefox reflector tldr fastfetch");
-            if (returnCode == 0) {
-                cout << "run a full system update? (y/n)\n: "; string fsuChoice; cin >> fsuChoice;
-                if (fsuChoice == "y" || fsuChoice == "Y") {
-                    cout << "running a full system update..\n";
-                    int fsuRes = system("sudo pacman -Syu --noconfirm");
-                    if (fsuRes == 0) {
+            cout << "prepare for \"jstmax!-use\"? (y/n): ";
+            string prepYoN; cin >> prepYoN;
+            if (prepYoN == "y" || prepYoN == "Y") {
+                cout << "\npreparing for \"jstmax!-use\"..\n";
+                system("cd ~/");
+                int returnCode = system("sudo pacman -Sy --noconfirm firefox reflector tldr fastfetch");
+                if (returnCode == 0) {
+                    cout << "run a full system update? (y/n)\n: "; string fsuChoice; cin >> fsuChoice;
+                    if (fsuChoice == "y" || fsuChoice == "Y") {
+                        cout << "running a full system update..\n";
+                        int fsuRes = system("sudo pacman -Syu --noconfirm");
+                        if (fsuRes == 0) {
+                            cout << ready4use; say what;
+                        }
+                        else {
+                            cout << err; say what;
+                        }
                         cout << ready4use; say what;
                     }
                     else {
-                        cout << err; say what;
+                        cout << ready4use; say what;
                     }
-                    cout << ready4use; say what;
                 }
                 else {
-                    cout << ready4use; say what;
+                    cout << err;
+                    say what;
                 }
             }
             else {
-                cout << err;
-                say what;
+                cout << "aborting.."; say what;
             }
         }
 
         else if (argc > 2 && (string(argv[2]) == "-c" || string(argv[2]) == "--custom-command")) {
             cout << "enter custom command: ";
-            string customCmd;
-            cin >> customCmd;
+            string customCmd; cin >> customCmd;
             int returnCustomCmd = system(customCmd.c_str());
             if (returnCustomCmd == 0) {
                 cout << "\ncommand executed correctly!\n";
@@ -128,7 +132,7 @@ int main(int argc, char* argv[]) {
 
         else {
             cout << "every option is available on the github repo's readme.md!";
-            cout << "\nunknown option: " << option;
+            cout << "\nunknown option: " << option << endl;
         }
     }
     say what;
