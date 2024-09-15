@@ -9,5 +9,3 @@ Building:
 2. Give execute permissions to './build-jmlt' by running 'chmod +x ./build-jmlt'
 3. Run './build-jmlt' in the 'build' folder
 4. Done!
-
-*Note: Make sure you have 'gcc' installed before building.
