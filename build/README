@@ -1,7 +1,11 @@
 [!] README - How to build JMLT
-1. Give permissions to './build-jmlt' by running 'chmod +x ./build-jmlt'
-2. Run './build-jmlt' in the 'build' folder
-3. Done!
+Preparation:
+1. Give execute permissions to 'pacmany' and 'yayy' by running 'chmod +x ./pacmany && chmod +x ./yayy'
+2. Add them to your PATH (e.g. 'cp ./pacmany /usr/bin/pacmany' and 'cp ./yayy /usr/bin/yayy')
+Building:
+1. Move inside the build folder 'cd ./build'
+2. Give execute permissions to './build-jmlt' by running 'chmod +x ./build-jmlt'
+3. Run './build-jmlt' in the 'build' folder
+4. Done!
 
 *Note: Make sure you have 'gcc' installed before building.
-*Note 2: To build again, you'll need to delete the 'JMLT.cpp' and 'jmlt4' files first.
