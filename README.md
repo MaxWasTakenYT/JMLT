@@ -1,6 +1,6 @@
 # jstmax!'s Linux Toolbox (JMLT4Short)
 a set of FOSS tools for Linux (mainly Arch Linux) \
-* note: you **need `figlet`, [`pacmany`]() and [`yayy`]() in PATH for JMLT to work properly.**
+* note: you **need `figlet`, [`pacmany`]() and [`yayy`]() inside your PATH for JMLT to work properly.**
 
 ## build yourself;
 it's not like you have a choice, since there are no releases :)
