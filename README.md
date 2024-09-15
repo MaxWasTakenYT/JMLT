@@ -1,6 +1,5 @@
 # JMLT - jstmax!'s (arch) Linux Toolbox
-a set of FOSS tools for Linux (mainly Arch Linux)
-* note: you **need `figlet`, [`pacmany`]() and [`yayy`]() inside your PATH for JMLT to work properly.**
+a set of simple FOSS tools for Linux (mainly Arch Linux)
 
 ## build yourself;
 it's not like you have a choice, since there are no releases :)
