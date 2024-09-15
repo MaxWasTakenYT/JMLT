@@ -9,5 +9,4 @@ it's not like you have a choice, since there are no releases :)
 * read the 'README' file for instructions: `cat ./README`
 
 &nbsp;
-###### [!] check the 'README' file for other stuff
 ###### { jstmax! } @ { 62 69 74 2E 6C 79 2F 6D 78 5F 69 6E 66 6F }
