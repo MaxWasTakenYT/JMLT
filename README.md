@@ -1,11 +1,6 @@
 # jstmax!'s Linux Toolbox (JMLT4Short)
-a set of stupid FOSS tools for Linux (mainly Arch Linux)
-
-## available options;
-* **-ju** / **--prepare-for-jstmax-use** : installs the packages that I would need on a fresh arch install
-* **-c** / **--custom-command** : enters a custom command (note: IT'S SHIT)
-* **-pmy** / **--pacman-yes** : full implementation of (now defunct) 'jm-pacmany'
-* **-yy** / **--yay-yes** : full implementation of (now defunct) 'jm-yayy'
+a set of FOSS tools for Linux (mainly Arch Linux) \
+* note: you **need `figlet`, [`pacmany`]() and [`yayy`]().**
 
 ## build yourself;
 it's not like you have a choice, since there are no releases :)
@@ -14,9 +9,8 @@ it's not like you have a choice, since there are no releases :)
 * open the 'build' folder: `cd ./build`
 * give permissions to 'build-jmlt': `chmod +x ./build-jmlt`
 * run 'build-jmlt': `./build-jmlt`
-* [recommended] add to PATH: `mv ./jmlt4 /usr/bin/jmlt4`
+* [recommended] add to PATH: `mv ./jmlt /usr/bin/jmlt`
 
 &nbsp;
-* [hahahahahahahahaha] one-liner bc yes: \
-`git clone https://github.com/MaxWasTakenYT/jstmax-linux-toolbox && cd ./jstmax-linux-toolbox/build/ && chmod +x ./build-jmlt && ./build-jmlt`
 ###### [!] check the 'README' file for other stuff
+###### { jstmax! } @ { 62 69 74 2E 6C 79 2F 6D 78 5F 69 6E 66 6F }
