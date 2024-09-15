@@ -1,1 +1,1 @@
-wget https://raw.githubusercontent.com/MaxWasTakenYT/jstmax-linux-toolbox/main/JMLT.cpp && g++ -o jmlt4 JMLT.cpp
+wget https://raw.githubusercontent.com/MaxWasTakenYT/jstmax-linux-toolbox/main/JMLT.cpp && g++ -o jmlt JMLT.cpp
