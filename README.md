@@ -7,9 +7,7 @@ it's not like you have a choice, since there are no releases :)
 * clone the repo: `git clone https://github.com/MaxWasTakenYT/jstmax-linux-toolbox`
 * go inside the repo folder: `cd ./jstmax-linux-toolbox`
 * open the 'build' folder: `cd ./build`
-* give permissions to 'build-jmlt': `chmod +x ./build-jmlt`
-* run 'build-jmlt': `./build-jmlt`
-* [recommended] add to PATH: `mv ./jmlt /usr/bin/jmlt`
+* read the 'README' file for instructions: `cat ./README`
 
 &nbsp;
 ###### [!] check the 'README' file for other stuff
