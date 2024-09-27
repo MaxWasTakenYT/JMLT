@@ -10,7 +10,6 @@ a set of simple FOSS tools for Linux (mainly Arch Linux)
 * chained command: `wget https://github.com/MaxWasTakenYT/JMLT/raw/refs/heads/main/needed/sources/jmlt-qi.cpp && g++ -o jmlt-qi jmlt-qi.cpp && rm jmlt-qi.cpp`
 
 ## 3. build manually;
-it's not like you have a choice, since there are no releases :)
 * clone the repo: `git clone https://github.com/MaxWasTakenYT/jstmax-linux-toolbox`
 * go inside the repo folder: `cd ./jstmax-linux-toolbox`
 * open the 'build' folder: `cd ./build`
