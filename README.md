@@ -6,10 +6,10 @@ a set of simple FOSS tools for Linux (mainly Arch Linux)
 * give exec perms to the installer: `chmod +x ./jmlt-qi`
 * run the installer: `./jmlt-qi`
 * 
-## 1.1. use the installer, but build it manually(?);
+## 2. use the installer, but build it manually(?);
 * chained command: `wget https://github.com/MaxWasTakenYT/JMLT/raw/refs/heads/main/needed/sources/jmlt-qi.cpp && g++ -o jmlt-qi jmlt-qi.cpp && rm jmlt-qi.cpp`
 
-## build manually;
+## 3. build manually;
 it's not like you have a choice, since there are no releases :)
 * clone the repo: `git clone https://github.com/MaxWasTakenYT/jstmax-linux-toolbox`
 * go inside the repo folder: `cd ./jstmax-linux-toolbox`
