@@ -16,28 +16,24 @@ int main() {
 		system("clear");
 		cout << "[i] Work directory created at ~/jmlt-temp\n";
 		system("mkdir ~/jmlt-temp");
-		system("cd ~/jmlt-temp");
 
 		cout << "[i] Installing dependancies\n";
 		system("sudo pacman -S figlet gcc wget git");
-		system("cd ~/jmlt-temp");
-		system("wget https://github.com/MaxWasTakenYT/JMLT/raw/refs/heads/main/needed/pacmany");
-		system("wget https://github.com/MaxWasTakenYT/JMLT/raw/refs/heads/main/needed/yayy");
-		system("chmod +x ./pacmany && chmod +x ./yayy");
-		system("sudo mv ./pacmany /usr/bin/pacmany");
-		system("sudo mv ./yayy /usr/bin/yayy");
+		system("cd ~/jmlt-temp && wget https://github.com/MaxWasTakenYT/JMLT/raw/refs/heads/main/needed/pacmany");
+		system("cd ~/jmlt-temp && wget https://github.com/MaxWasTakenYT/JMLT/raw/refs/heads/main/needed/yayy");
+		system("cd ~/jmlt-temp && chmod +x ./pacmany && chmod +x ./yayy");
+		system("cd ~/jmlt-temp && sudo mv ./pacmany /usr/bin/pacmany");
+		system("cd ~/jmlt-temp && sudo mv ./yayy /usr/bin/yayy");
 
 		cout << "[i] Building JMLT\n";
-		system("cd ~/jmlt-temp");
-		system("wget https://raw.githubusercontent.com/MaxWasTakenYT/JMLT/main/JMLT.cpp ~/jmlt-temp && g++ -o jmlt JMLT.cpp");
+		system("cd ~/jmlt-temp && wget https://raw.githubusercontent.com/MaxWasTakenYT/JMLT/main/JMLT.cpp ~/jmlt-temp && g++ -o jmlt JMLT.cpp");
 
 		cout << "[i] Adding JMLT to PATH (using /usr/bin)\n";
-		system("chmod +x ./jmlt && sudo mv ./jmlt /usr/bin/jmlt");
+		system("cd ~/jmlt-temp && chmod +x ./jmlt && sudo mv ./jmlt /usr/bin/jmlt");
 
 		cout << "[i] Cleaning up (deleting work directory)\n";
-		system("cd ~/jmlt-temp");
-		system("sudo rm ~/jmlt-temp/JMLT.cpp");
-		system("sudo rmdir ~/jmlt-temp");
+		system("cd ~/jmlt-temp && sudo rm ~/jmlt-temp/JMLT.cpp");
+		system("cd ~/ && sudo rmdir ~/jmlt-temp");
 
 		cout << "[i] Installated successfully\n\n";
 		goto menu;
