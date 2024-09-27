@@ -9,11 +9,13 @@ int main() {
     system("figlet JMLT");
     cout << "\nRunning version T4!";
 
+    mainMenu:
     cout << "\n\nMain menu;";
     cout << "\n[J] Prepare for \"jstmax! use\"";
     cout << "\n[C] Enter a custom command";
-    cout << "\n[PMY] Runs pacmany (You need to install it first.)";
-    cout << "\n[YY] Runs yayy (You need to install it first.)";
+    cout << "\n[PMY] Runs pacmany";
+    cout << "\n[YY] Runs yayy";
+    cout << "\n[Q] Quits JMLT";
 
     cout << "\n\nEnter a selection: "; string menuSel; cin >> menuSel;
     if (menuSel == "J" || menuSel == "j") {
@@ -27,14 +29,14 @@ int main() {
             string doFsu; cin >> doFsu;
             if (doFsu == "y" || doFsu == "Y") {
                 system("sudo pacman -Syu --noconfirm");
-                return 0;
+                goto mainMenu;
             }
             else {
-                return 0;
+                goto mainMenu;
             }
         }
         else {
-            return 0;
+            goto mainMenu;
         }
 
     }
@@ -54,6 +56,6 @@ int main() {
     }
     else {
         system("clear");
-        cout << "Unknown option, try again.\n"; return 0;
+        cout << "Unknown option, try again.\n"; goto mainMenu;
     }
 }
