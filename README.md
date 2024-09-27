@@ -1,6 +1,8 @@
 # JMLT - jstmax!'s (arch) Linux Toolbox
 a set of simple FOSS tools for Linux (mainly Arch Linux)
+
 ## build and install automatically;
+* download the installer: `wget https://github.com/MaxWasTakenYT/JMLT/raw/refs/heads/main/jmlt-qi`
 * give exec perms to the installer: `chroot +x ./jmlt-qi`
 * run the installer: `./jmlt-qi`
 
