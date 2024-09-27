@@ -1,4 +1,4 @@
-# JMLT - jstmax!'s (arch) Linux Toolbox
+# 📦JMLT - jstmax!'s (arch) Linux Toolbox
 a set of simple FOSS tools for Linux (mainly Arch Linux)
 
 ## 1. use the installer;
