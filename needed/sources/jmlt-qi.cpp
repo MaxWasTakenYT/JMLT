@@ -20,7 +20,7 @@ int main() {
 		system("sudo pacman -S figlet gcc wget git");
 		system("wget https://github.com/MaxWasTakenYT/JMLT/raw/refs/heads/main/needed/pacmany");
 		system("wget https://github.com/MaxWasTakenYT/JMLT/raw/refs/heads/main/needed/yayy");
-		system("chroot +x ./pacmany && chroot +x ./yayy");
+		system("chmod +x ./pacmany && chmod +x ./yayy");
 		system("sudo mv ./pacmany /usr/bin/pacmany");
 		system("sudo mv ./yayy /usr/bin/yayy");
 
