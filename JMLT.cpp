@@ -5,18 +5,19 @@ using namespace std;
 
 int main() {
     system("clear");
-    system("figlet JMLT");
-    cout << "\nRunning version T5!";
 
     mainMenu:
+    system("figlet JMLT");
+    cout << "\nRunning version T5!";
     cout << "\n\nMain menu;";
     cout << "\n[J] Prepare for \"jstmax! use\"";
     cout << "\n[C] Enter a custom command";
     cout << "\n[PMY] Runs pacmany";
     cout << "\n[YY] Runs yayy";
     cout << "\n[Q] Quits JMLT";
+    cout << "\n\nEnter a selection: ";
+    string menuSel; cin >> menuSel;
 
-    cout << "\n\nEnter a selection: "; string menuSel; cin >> menuSel;
     if (menuSel == "J" || menuSel == "j") {
         system("clear");
         system("figlet \"JM-Use\"");
@@ -44,6 +45,7 @@ int main() {
         system("figlet \"jC.CMD\"");
         cout << "~> "; string jccmd; cin >> jccmd;
         system(jccmd.c_str());
+        goto mainMenu;
     }
     else if (menuSel == "PMY" || menuSel == "pmy") {
         system("clear");
@@ -52,6 +54,10 @@ int main() {
     else if (menuSel == "YY" || menuSel == "yy") {
         system("clear");
         system("yayy"); return 0;
+    }
+    else if (menuSel == "Q" || menuSel == "q") {
+        system("clear");
+        return 0;
     }
     else {
         system("clear");
