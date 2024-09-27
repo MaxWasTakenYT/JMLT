@@ -8,7 +8,7 @@ int main() {
 
     mainMenu:
     system("figlet JMLT");
-    cout << "\nRunning version T5!";
+    cout << "\nRunning version T6!";
     cout << "\n\nMain menu;";
     cout << "\n[J] Prepare for \"jstmax! use\"";
     cout << "\n[C] Enter a custom command";
