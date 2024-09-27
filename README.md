@@ -3,7 +3,7 @@ a set of simple FOSS tools for Linux (mainly Arch Linux)
 
 ## use the installer;
 * download the installer: `wget https://github.com/MaxWasTakenYT/JMLT/raw/refs/heads/main/jmlt-qi`
-* give exec perms to the installer: `chroot +x ./jmlt-qi`
+* give exec perms to the installer: `chmod +x ./jmlt-qi`
 * run the installer: `./jmlt-qi`
 
 ## build manually;
