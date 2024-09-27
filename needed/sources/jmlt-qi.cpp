@@ -20,19 +20,22 @@ int main() {
 
 		cout << "[i] Installing dependancies\n";
 		system("sudo pacman -S figlet gcc wget git");
-		system("wget https://github.com/MaxWasTakenYT/JMLT/raw/refs/heads/main/needed/pacmany ~/jmlt-temp");
-		system("wget https://github.com/MaxWasTakenYT/JMLT/raw/refs/heads/main/needed/yayy ~/jmlt-temp");
+		system("cd ~/jmlt-temp");
+		system("wget https://github.com/MaxWasTakenYT/JMLT/raw/refs/heads/main/needed/pacmany");
+		system("wget https://github.com/MaxWasTakenYT/JMLT/raw/refs/heads/main/needed/yayy");
 		system("chmod +x ./pacmany && chmod +x ./yayy");
 		system("sudo mv ./pacmany /usr/bin/pacmany");
 		system("sudo mv ./yayy /usr/bin/yayy");
 
 		cout << "[i] Building JMLT\n";
+		system("cd ~/jmlt-temp");
 		system("wget https://raw.githubusercontent.com/MaxWasTakenYT/JMLT/main/JMLT.cpp ~/jmlt-temp && g++ -o jmlt JMLT.cpp");
 
 		cout << "[i] Adding JMLT to PATH (using /usr/bin)\n";
 		system("chmod +x ./jmlt && sudo mv ./jmlt /usr/bin/jmlt");
 
 		cout << "[i] Cleaning up (deleting work directory)\n";
+		system("cd ~/jmlt-temp");
 		system("sudo rm ~/jmlt-temp/JMLT.cpp");
 		system("sudo rmdir ~/jmlt-temp");
 
