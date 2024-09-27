@@ -7,7 +7,7 @@ using namespace std;
 int main() {
     system("clear");
     system("figlet JMLT");
-    cout << "\nRunning version T4!";
+    cout << "\nRunning version T5!";
 
     mainMenu:
     cout << "\n\nMain menu;";
