@@ -26,10 +26,10 @@ int main() {
 		system("cd ~/jmlt-temp && sudo mv ./yayy /usr/bin/yayy");
 
 		cout << "[i] Building JMLT\n";
-		system("cd ~/jmlt-temp && wget https://raw.githubusercontent.com/MaxWasTakenYT/JMLT/main/JMLT.cpp ~/jmlt-temp && g++ -o jmlt JMLT.cpp");
+		system("cd ~/jmlt-temp && wget https://raw.githubusercontent.com/MaxWasTakenYT/JMLT/main/JMLT.cpp && g++ -o jmlt JMLT.cpp");
 
 		cout << "[i] Adding JMLT to PATH (using /usr/bin)\n";
-		system("chmod +x ~/jmlt-temp/jmlt && sudo mv ~/jmlt-temp/jmlt /usr/bin/jmlt");
+		system("cd ~/jmlt-temp && chmod +x ./jmlt && sudo mv ./jmlt /usr/bin/jmlt");
 
 		cout << "[i] Cleaning up (deleting work directory)\n";
 		system("cd ~/jmlt-temp && sudo rm ~/jmlt-temp/JMLT.cpp");
