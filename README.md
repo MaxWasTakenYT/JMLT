@@ -10,10 +10,10 @@ a set of simple FOSS tools for Linux (mainly Arch Linux)
 * chained command: `wget https://github.com/MaxWasTakenYT/JMLT/raw/refs/heads/main/needed/sources/jmlt-qi.cpp && g++ -o jmlt-qi jmlt-qi.cpp && rm jmlt-qi.cpp`
 
 ## 3. build manually;
-* clone the repo: `git clone https://github.com/MaxWasTakenYT/jstmax-linux-toolbox`
-* go inside the repo folder: `cd ./jstmax-linux-toolbox`
+* clone the repo: `git clone https://github.com/MaxWasTakenYT/jmlt`
+* go inside the repo folder: `cd ./jmlt`
 * open the 'build' folder: `cd ./build`
-* read the 'README' file for instructions: `cat ./README`
+* read the 'README' file for instructions: (e.g. `cat ./README`)
 
 &nbsp;
 ###### { jstmax! } @ { 62 69 74 2E 6C 79 2F 6D 78 5F 69 6E 66 6F }
