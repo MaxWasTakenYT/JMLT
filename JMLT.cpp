@@ -8,7 +8,7 @@ int main() {
 
 mainMenu:
     system("figlet JMLT");
-    cout << "\nRunning version T6!";
+    cout << "\nRunning version T7!";
     cout << "\n\nMain menu;";
     cout << "\n[J] Prepare for \"jstmax! use\"";
     cout << "\n[C] Enter a custom command";
@@ -43,7 +43,7 @@ mainMenu:
     else if (menuSel == 'C' || menuSel == 'c') {
         system("clear");
         system("figlet \"jC.CMD\"");
-        cout << "~> "; string jccmd; cin >> jccmd;
+        cout << "~> "; string jccmd; getline(cin, jccmd);
         system(jccmd.c_str());
         goto mainMenu;
     }
