@@ -24,12 +24,8 @@ int main() {
         cout << "\ncontinue?\n";
         string juA; cin >> juA;
         if (juA == "y" || juA == "Y") {
-            system("sudo pacman -S --noconfirm figlet tldr fish reflector fastfetch");
-            cout << "\nRun a full system upgrade?\n";
-            string doFsu; cin >> doFsu;
-            if (doFsu == "y" || doFsu == "Y") {
-                system("sudo pacman -Syu --noconfirm");
-                goto mainMenu;
+            system("sudo pacman -Syu --noconfirm figlet tldr fish reflector fastfetch rustdesk");
+            goto mainMenu;
             }
             else {
                 goto mainMenu;
