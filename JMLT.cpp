@@ -24,7 +24,8 @@ int main() {
         cout << "\ncontinue?\n";
         string juA; cin >> juA;
         if (juA == "y" || juA == "Y") {
-            system("sudo pacman -Syu --noconfirm figlet tldr fish reflector fastfetch rustdesk");
+            system("sudo pacman -Syu --noconfirm figlet tldr fish reflector fastfetch");
+            // add packages with yay (e.g. rustdesk)
             goto mainMenu;
             }
             else {
