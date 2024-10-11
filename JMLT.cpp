@@ -36,7 +36,7 @@ mainMenu:
         system("figlet \"jC.CMD\"");
         cout << "~> "; 
         string jccmd; 
-        cin >> jccmd;
+        getline(cin, jccmd);
         system(jccmd.c_str());
         goto mainMenu;
     } 
