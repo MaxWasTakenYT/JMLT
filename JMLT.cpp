@@ -52,6 +52,7 @@ int main() {
 			else {
 				system(jccmd.c_str());
 			}
+			break;
 		case 'p':
 		// Exits JMLT and runs pacmany
 			system("clear");
