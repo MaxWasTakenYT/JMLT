@@ -34,14 +34,24 @@ int main() {
             system("sudo pacman -Syu --noconfirm figlet tldr fish reflector fastfetch lolcat");
             // TODO: Add packages with yay (e.g. rustdesk)
 			}
-			main();
+			else {
+				system("clear");
+				main();
+			}
 		case 'c':
 		// Probably gonna remove this, pretty useless and overall bad for security
 			system("clear");
         	system("figlet \"jC.CMD\"");
+			cout << "(enter 'quit' to return to menu)\n";
         	cout << "~> ";
         	getline(cin, jccmd);
-        	system(jccmd.c_str());
+			if (jccmd == "quit") {
+				system("clear");
+				main();
+			}
+			else {
+				system(jccmd.c_str());
+			}
 		case 'p':
 		// Exits JMLT and runs pacmany
 			system("clear");
